@@ -26,6 +26,7 @@ int Run::getEnd(){
 
 int Run::Next(){
 	if(bufferPage.GetFirst(&record)==0){
+		cout<<"Start: " << start << " End: " << end << "\n";
 		if(start>=end){
 			return 0;
 		}
@@ -83,6 +84,11 @@ void BigQ::sortRunAndWriteToFile(vector<Record*> &recordsForSorting,off_t &pageP
 		}
 		recordCounter++;
 	}
+	
+	if(!bufferPage.isEmpty()){
+		file.AddPage(&bufferPage,pagePointerInFile++);
+		bufferPage.EmptyItOut();
+	}
 	currRunSize = 0;
 	recordsForSorting.clear();
 }
@@ -106,8 +112,8 @@ void BigQ::tppmsSort(){
 		recordsForSorting.push_back(tempRecord);
 		currRunSize+=tempRecord->GetSize();
 	}
-	cout<<"Last Run to disk\n";
 	if(!recordsForSorting.empty()){
+		cout<<"Adding last page\n";
 		this->sortRunAndWriteToFile(recordsForSorting,pagePointerInFile,currRunSize,recordCounter);
 	}
 
@@ -128,9 +134,9 @@ void BigQ::createRuns(){
 	}
 	runs.push_back(new Run(&file,index,file.GetLength()-1));
 
-	for(Run* run:runs){
-		cout<<"Run start: "<<run->getStart()<<" end: "<<run->getEnd()<<"\n";
-	}
+	// for(Run* run:runs){
+	// 	cout<<"Run start: "<<run->getStart()<<" end: "<<run->getEnd()<<"\n";
+	// }
 }
 
 // construct priority queue over sorted runs and dump sorted data into the out pipe
@@ -142,13 +148,12 @@ void BigQ::tppmsMerge(){
 	priority_queue<Run*, vector<Run*>, decltype(compare)> PQ(compare);
 
 	for(Run* run: runs){
-		cout << "Run start" << run->getStart() <<"\n";
+		// cout << "Run start" << run->getStart() <<"\n";
 		PQ.push(run);
 	}
-
     Run *run;
 	while (!PQ.empty()) {
-        run = PQ.top();    
+        run = PQ.top();
 		out->Insert(run->getRecordPointer());
 		PQ.pop();
         if (run->Next()) {
