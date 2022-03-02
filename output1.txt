@@ -1,0 +1,36 @@
+ specify sort ordering (when done press ctrl-D):
+	  
+Sort starting
+ producer: opened DBFile /Users/vishy/parsedData10mb/nation.bin
+FileSize: 2
+ producer: inserted 25 recs into the pipe
+Last Run to disk
+Sorted 25 records into chunks
+temp file size 0
+Run Creation starting
+****************************************************************************************************************************************************************************************
+Run start: 1 end: 2
+Merge starting
+Run start1
+****************************************************************************************************************************************************************************************
+o_orderkey: [59585], o_custkey: [1102], o_orderstatus: [F], o_totalprice: [164205], o_orderdate: [1992-09-23], o_orderpriority: [2-HIGH], o_clerk: [Clerk#000000169], o_shippriority: [0], o_comment: [egular deposits. blithely special requests boost furiously about the careful]
+o_orderkey: [59586], o_custkey: [1111], o_orderstatus: [F], o_totalprice: [217472], o_orderdate: [1992-03-08], o_orderpriority: [5-LOW], o_clerk: [Clerk#000000410], o_shippriority: [0], o_comment: [refully special ideas. idly even dependencies cajole ironic, regular the]
+o_orderkey: [59587], o_custkey: [194], o_orderstatus: [F], o_totalprice: [9638.86], o_orderdate: [1993-09-10], o_orderpriority: [4-NOT SPECIFIED], o_clerk: [Clerk#000000912], o_shippriority: [0], o_comment: [. theodolites sleep carefully fluffily ironic foxes. express p]
+o_orderkey: [59588], o_custkey: [1211], o_orderstatus: [O], o_totalprice: [71416.5], o_orderdate: [1995-06-15], o_orderpriority: [2-HIGH], o_clerk: [Clerk#000000259], o_shippriority: [0], o_comment: [lar accounts cajole about the ]
+o_orderkey: [59589], o_custkey: [281], o_orderstatus: [F], o_totalprice: [73691.7], o_orderdate: [1992-04-12], o_orderpriority: [3-MEDIUM], o_clerk: [Clerk#000000412], o_shippriority: [0], o_comment: [ the furiously silent theodolites. evenly regular packages ]
+o_orderkey: [59590], o_custkey: [796], o_orderstatus: [F], o_totalprice: [262601], o_orderdate: [1993-02-26], o_orderpriority: [3-MEDIUM], o_clerk: [Clerk#000000934], o_shippriority: [0], o_comment: [ carefully against ]
+o_orderkey: [59591], o_custkey: [580], o_orderstatus: [F], o_totalprice: [90906.5], o_orderdate: [1994-10-10], o_orderpriority: [4-NOT SPECIFIED], o_clerk: [Clerk#000000034], o_shippriority: [0], o_comment: [s detect carefully slyly regular depe]
+o_orderkey: [59616], o_custkey: [430], o_orderstatus: [O], o_totalprice: [76956.1], o_orderdate: [1997-04-20], o_orderpriority: [4-NOT SPECIFIED], o_clerk: [Clerk#000000965], o_shippriority: [0], o_comment: [refully pending pear]
+o_orderkey: [59617], o_custkey: [304], o_orderstatus: [F], o_totalprice: [173784], o_orderdate: [1993-05-20], o_orderpriority: [4-NOT SPECIFIED], o_clerk: [Clerk#000000364], o_shippriority: [0], o_comment: [ns! foxes nag. furiously regular packages nag blithely even, ]
+ consumer: removed 14905 recs from the pipe
+****************************************************************************************************************************************************************************************
+ specify sort ordering (when done press ctrl-D):
+	  
+Sort starting
+ producer: opened DBFile /Users/vishy/parsedData10mb/nation.bin
+FileSize: 2
+ producer: inserted 25 recs into the pipe
+Last Run to disk
+Sorted 25 records into chunks
+temp file size 0
+Run Creation starting

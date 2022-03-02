@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "filesystem": "cpp",
+        "initializer_list": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp",
+        "queue": "cpp",
+        "iostream": "cpp"
+    },
+    "C_Cpp.default.cppStandard": "gnu++11",
+    "C_Cpp.default.cStandard": "c11",
+}
