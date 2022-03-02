@@ -66,7 +66,9 @@ int DBFile::CheckOverFlow (){
 void DBFile::WriteMode(){
     if(mode == readMode){
         page.EmptyItOut();
-        file.GetLastPage(&page);
+        if(file.GetLength()!=0){
+            file.GetLastPage(&page);
+        }
     }
     mode = writeMode;
     return;
