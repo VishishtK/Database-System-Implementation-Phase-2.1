@@ -26,7 +26,7 @@ int Run::getEnd(){
 
 int Run::Next(){
 	if(bufferPage.GetFirst(&record)==0){
-		cout<<"Start: " << start << " End: " << end << "\n";
+		// cout<<"Start: " << start << " End: " << end << "\n";
 		if(start>=end){
 			return 0;
 		}
@@ -38,11 +38,11 @@ int Run::Next(){
 
 void* tppms(void* args){
 	BigQ *bigQ = (BigQ*)args;
-	cout<<"Sort starting\n";
+	// cout<<"Sort starting\n";
 	bigQ->tppmsSort();
-	cout<<"Run Creation starting\n";
+	// cout<<"Run Creation starting\n";
 	bigQ->createRuns();
-	cout<<"Merge starting\n";
+	// cout<<"Merge starting\n";
 	bigQ->tppmsMerge();
 	return nullptr;	
 }
@@ -113,12 +113,12 @@ void BigQ::tppmsSort(){
 		currRunSize+=tempRecord->GetSize();
 	}
 	if(!recordsForSorting.empty()){
-		cout<<"Adding last page\n";
+		// cout<<"Adding last page\n";
 		this->sortRunAndWriteToFile(recordsForSorting,pagePointerInFile,currRunSize,recordCounter);
 	}
 
-	cout<<"Sorted " << recordCounter <<" records into chunks\n";
-	cout<<"temp file size " << file.GetLength()<<"\n";
+	// cout<<"Sorted " << recordCounter <<" records into chunks\n";
+	// cout<<"temp file size " << file.GetLength()<<"\n";
 }
 
 // bool BigQ::compare(Run* left, Run* right){

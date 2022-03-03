@@ -9,9 +9,9 @@ n_nationkey: [23], n_name: [UNITED KINGDOM], n_regionkey: [3], n_comment: [eans 
 n_nationkey: [24], n_name: [UNITED STATES], n_regionkey: [1], n_comment: [y final packages. slow foxes cajole quickly. quickly silent platelets breach ironic accounts. unusual pinto be]
  consumer: removed 25 recs from the pipe
 ****************************************************************************************************************************************************************************************
-Start: 3 End: 3
+ producer: opened DBFile /Users/vishy/parsedData10mb/customer.bin
+ producer: inserted 1500 recs into the pipe
  consumer: removed 1500 recs from the pipe
-FileSize: 4
 ****************************************************************************************************************************************************************************************
 o_orderkey: [59968], o_custkey: [898], o_orderstatus: [O], o_totalprice: [59677.3], o_orderdate: [1997-10-12], o_orderpriority: [4-NOT SPECIFIED], o_clerk: [Clerk#000000833], o_shippriority: [0], o_comment: [ages. furiously final foxes wake of the]
 o_orderkey: [59969], o_custkey: [1210], o_orderstatus: [F], o_totalprice: [223578], o_orderdate: [1992-01-12], o_orderpriority: [2-HIGH], o_clerk: [Clerk#000000926], o_shippriority: [0], o_comment: [gular packages use. final deposits cajole quickly regu]

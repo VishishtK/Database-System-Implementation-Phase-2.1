@@ -137,7 +137,7 @@ int DBFile::Close () {
 
     WriteMetaData();
     int fileSize = file.Close();
-    cout << "FileSize: " << fileSize << "\n";
+    // cout << "FileSize: " << fileSize << "\n";
     return 1;
 }
 
