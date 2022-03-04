@@ -2,6 +2,8 @@
 CC = g++ -O2 -Wno-deprecated -std=c++11 -Wwritable-strings
 CCAddressSanitizer = -fsanitize=address -fno-omit-frame-pointer -g
 
+gtest_tag = -std=c++0x -lgtest -lgtest_main -pthread
+
 tag = -i
 
 ifdef linux
@@ -16,6 +18,12 @@ a1test.out: Record.o Comparison.o ComparisonEngine.o Schema.o File.o DBFile.o Pi
 
 addressSanitizer: 
 	$(CC) $(CCAddressSanitizer) -o addressSanitizer.out Record.cc Comparison.cc ComparisonEngine.cc Schema.cc File.cc BigQ.cc DBFile.cc Pipe.cc y.tab.o lex.yy.o test.cc -ll -lpthread
+
+gtest: Record.o Comparison.o ComparisonEngine.o Schema.o File.o BigQ.o Pipe.o y.tab.o lex.yy.o gtest.o
+	$(CC) -o gtest.out Record.o Comparison.o ComparisonEngine.o Schema.o File.o BigQ.o Pipe.o y.tab.o lex.yy.o gtest.o $(gtest_tag)
+
+gtest.o: gtest.cc
+	$(CC) -g -c gtest.cc $(gtest_tag)
 
 test.o: test.cc
 	$(CC) -g -c test.cc

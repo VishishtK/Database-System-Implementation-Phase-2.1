@@ -8,8 +8,10 @@ Run::Run(File* filePtr, int start, int end){
 	this->filePtr = filePtr;
 	this->start = start;
 	this->end = end;
-	filePtr->GetPage(&bufferPage,this->start++);
-	bufferPage.GetFirst(&record);
+	if(start<end){
+		filePtr->GetPage(&bufferPage,this->start++);
+		bufferPage.GetFirst(&record);
+	}
 }
 
 Record* Run::getRecordPointer(){
@@ -65,6 +67,7 @@ BigQ :: BigQ (Pipe &in, Pipe &out, OrderMaker &sortorder, int runlen) {
 
 BigQ::~BigQ () {
 	// Delete
+	file.Close();
 }
 
 void BigQ::sortRunAndWriteToFile(vector<Record*> &recordsForSorting,off_t &pagePointerInFile,int &currRunSize, int &recordCounter){
