@@ -10,8 +10,8 @@
 using namespace std;
 
 // make sure that the information below is correct 
-char *dbfile_dir = "/Users/vishy/parsedData10mb/"; // dir where binary heap files should be stored
-char *tpch_dir ="/Users/vishy/data10mb/"; // dir where dbgen tpch files (extension *.tbl) can be found
+char *dbfile_dir = "/Users/vishy/parsedData1gb/"; // dir where binary heap files should be stored
+char *tpch_dir ="/Users/vishy/data1gb/"; // dir where dbgen tpch files (extension *.tbl) can be found
 char *catalog_path = "catalog"; // full path of the catalog file/ full path of the catalog file
 
 extern "C" {
